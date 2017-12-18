@@ -1,7 +1,10 @@
 {
-  "name": "react-qui-button",
+  "name": "@react-qui/button",
   "version": "1.0.4",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "lib",
     "build",
