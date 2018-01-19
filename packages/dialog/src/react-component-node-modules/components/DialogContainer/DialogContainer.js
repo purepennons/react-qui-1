@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { noop } from 'lodash/core'
+
 import { $gray01, $bgColor } from '../../styled_global/colors'
 
 import closeIcon from '../../assets/delete.svg'
@@ -40,7 +42,7 @@ const Container = styled.div`
 
 
 
-const DialogContainer = ({ children, visible, onClose, ...rest }) => (
+const DialogContainer = ({ children, visible, onClose = noop, ...rest }) => (
   <Container {...rest} visible={visible}>
     <CloseIcon onClick={onClose}>
       <img src={closeIcon} alt="close" />

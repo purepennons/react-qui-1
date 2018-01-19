@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '@react-qui/button'
 import styled from 'styled-components'
+import { noop } from 'lodash/core'
 
 import DialogContainer from '../DialogContainer/DialogContainer'
 
@@ -26,8 +27,8 @@ const TextDialog = ({
   children,
   confirmText,
   cancelText,
-  onConfirm,
-  onCancel,
+  onConfirm = noop,
+  onCancel = noop,
   ...rest
 }) => {
   return (
