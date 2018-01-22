@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import idx from 'idx'
-import { noop } from 'lodash/core'
+import { noop, uniqueId } from 'lodash/core'
+import Draggable from 'react-draggable'
+import { withStateHandlers, compose } from 'recompose'
 
 import { $gray01, $bgColor } from '../../styled_global/colors'
 import { importAllFiles } from '../../utils/utils'
@@ -47,41 +49,19 @@ const ControlIcon = styled.a`
     width: 9px;
     height: 9px;
     background-repeat: no-repeat;
-    background-position: center; 
-  }
-
-  .mini-icon {
-    background-image: ${({ theme, iconsSrc }) =>
-      `url(${
-        iconsSrc.svg[`btn_mini_${theme}`] ||
-        iconsSrc.png[`btn_mini_${theme}`] ||
-        ''
-      })`};
-  }
-  
-  .close-icon {
-    background-image: ${({ theme, iconsSrc }) =>
-      `url(${
-        iconsSrc.svg[`btn_close_${theme}`] ||
-        iconsSrc.png[`btn_close_${theme}`] ||
-        ''
-      })`};
+    background-position: center;
+    background-image: ${({ type, theme, iconsSrc }) =>
+      `url(${iconsSrc.svg[`btn_${type}_${theme}`] ||
+        iconsSrc.png[`btn_${type}_${theme}`] ||
+        ''})`};
   }
 
   &:hover {
-    .mini-icon {
-      background-image: ${({ theme, iconsSrc }) => {
-        const url = idx(iconsSrc, _ => _.svg[`btn_mini_over_${theme}`]) ||
-          idx(iconsSrc, _ => _.png[`btn_mini_over_${theme}`]) ||
-          ''
-        return `url("${url}")`
-      }};
-    }
-
-    .close-icon {
-      background-image: ${({ theme, iconsSrc }) => {
-        const url = idx(iconsSrc, _ => _.svg[`btn_close_over_${theme}`]) ||
-          idx(iconsSrc, _ => _.png[`btn_close_over_${theme}`]) ||
+    i {
+      background-image: ${({ type, theme, iconsSrc }) => {
+        const url =
+          idx(iconsSrc, _ => _.svg[`btn_${type}_over_${theme}`]) ||
+          idx(iconsSrc, _ => _.png[`btn_${type}_over_${theme}`]) ||
           ''
         return `url("${url}")`
       }};
@@ -89,19 +69,11 @@ const ControlIcon = styled.a`
   }
 
   &:active {
-    .mini-icon {
-      background-image: ${({ theme, iconsSrc }) => {
-        const url = idx(iconsSrc, _ => _.svg[`btn_mini_pressed_${theme}`]) ||
-          idx(iconsSrc, _ => _.png[`btn_mini_pressed_${theme}`]) ||
-          ''
-        return `url("${url}")`
-      }};
-    }
-
-    .close-icon {
-      background-image: ${({ theme, iconsSrc }) => {
-        const url = idx(iconsSrc, _ => _.svg[`btn_close_pressed_${theme}`]) ||
-          idx(iconsSrc, _ => _.png[`btn_close_pressed_${theme}`]) ||
+    i {
+      background-image: ${({ type, theme, iconsSrc }) => {
+        const url =
+          idx(iconsSrc, _ => _.svg[`btn_${type}_pressed_${theme}`]) ||
+          idx(iconsSrc, _ => _.png[`btn_${type}_pressed_${theme}`]) ||
           ''
         return `url("${url}")`
       }};
@@ -118,29 +90,62 @@ const DialogContainer = ({
   children,
   theme,
   visible,
+  draggableSelector,
+  disableDraggableSelector,
+  draggableOpts,
+  showClose,
+  showMini,
   onClose = noop,
+  onMiniify = noop,
   ...rest
 }) => {
+  const controlBarClass = uniqueId('control_bar__')
+  const cancelSelector = disableDraggableSelector
+    ? [`.${controlBarClass}`, disableDraggableSelector].join(', ')
+    : `.${controlBarClass}`
+
   return (
-    <Container {...rest} visible={visible}>
-      <ControlBar>
-        <ControlIcon theme={theme} iconsSrc={icons}>
-          <i className="mini-icon" />
-        </ControlIcon>
-        <ControlIcon theme={theme} iconsSrc={icons}>
-          <i className="close-icon" />
-        </ControlIcon>
-      </ControlBar>
-      <Content>{children}</Content>
-    </Container>
+    <Draggable bounds="body" handle={draggableSelector} cancel={cancelSelector} {...draggableOpts}>
+      <Container {...rest} visible={visible}>
+        <ControlBar className={controlBarClass}>
+          {showMini ? (
+            <ControlIcon
+              type="mini"
+              theme={theme}
+              iconsSrc={icons}
+              onClick={onMiniify}
+            >
+              <i />
+            </ControlIcon>
+          ) : null}
+          {showClose ? (
+            <ControlIcon
+              type="close"
+              theme={theme}
+              iconsSrc={icons}
+              onClick={onClose}
+            >
+              <i />
+            </ControlIcon>
+          ) : null}
+        </ControlBar>
+        <Content>{children}</Content>
+      </Container>
+    </Draggable>
   )
 }
 
 DialogContainer.propTypes = {
   className: PropTypes.string,
+  draggableSelector: PropTypes.string,
+  disableDraggableSelector: PropTypes.string,
+  draggableOpts: PropTypes.object,
   theme: PropTypes.oneOf(['light', 'dark']),
-  onClose: PropTypes.func,
   visible: PropTypes.bool,
+  showClose: PropTypes.bool,
+  showMini: PropTypes.bool,
+  onClose: PropTypes.func,
+  onMiniify: PropTypes.func,
 }
 
 DialogContainer.defaultProps = {
@@ -148,4 +153,11 @@ DialogContainer.defaultProps = {
   visible: false,
 }
 
-export default DialogContainer
+const enhancer = compose(
+  withStateHandlers(() => ({ activeDrags: 0 }), {
+    onStart: ({ activeDrags }) => () => ++activeDrags,
+    onStop: ({ activeDrags }) => () => --activeDrags,
+  }),
+)
+
+export default enhancer(DialogContainer)
