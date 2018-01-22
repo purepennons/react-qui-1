@@ -1,0 +1,472 @@
+<svg id="btn_close_black.png_btn_close_black.svg" data-name="btn_close_black.png,btn_close_black.svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="9" viewBox="0 0 9 9">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.3;
+      }
+
+      .cls-1, .cls-30 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+
+      .cls-4 {
+        filter: url(#filter-4);
+      }
+
+      .cls-5 {
+        filter: url(#filter-5);
+      }
+
+      .cls-6 {
+        filter: url(#filter-6);
+      }
+
+      .cls-7 {
+        filter: url(#filter-7);
+      }
+
+      .cls-8 {
+        filter: url(#filter-8);
+      }
+
+      .cls-9 {
+        filter: url(#filter-9);
+      }
+
+      .cls-10 {
+        filter: url(#filter-10);
+      }
+
+      .cls-11 {
+        filter: url(#filter-11);
+      }
+
+      .cls-12 {
+        filter: url(#filter-12);
+      }
+
+      .cls-13 {
+        filter: url(#filter-13);
+      }
+
+      .cls-14 {
+        filter: url(#filter-14);
+      }
+
+      .cls-15 {
+        filter: url(#filter-15);
+      }
+
+      .cls-16 {
+        filter: url(#filter-16);
+      }
+
+      .cls-17 {
+        filter: url(#filter-17);
+      }
+
+      .cls-18 {
+        filter: url(#filter-18);
+      }
+
+      .cls-19 {
+        filter: url(#filter-19);
+      }
+
+      .cls-20 {
+        filter: url(#filter-20);
+      }
+
+      .cls-21 {
+        filter: url(#filter-21);
+      }
+
+      .cls-22 {
+        filter: url(#filter-22);
+      }
+
+      .cls-23 {
+        filter: url(#filter-23);
+      }
+
+      .cls-24 {
+        filter: url(#filter-24);
+      }
+
+      .cls-25 {
+        filter: url(#filter-25);
+      }
+
+      .cls-26 {
+        filter: url(#filter-26);
+      }
+
+      .cls-27 {
+        filter: url(#filter-27);
+      }
+
+      .cls-28 {
+        filter: url(#filter-28);
+      }
+
+      .cls-29 {
+        filter: url(#filter-29);
+      }
+
+      .cls-31 {
+        filter: url(#filter-31);
+      }
+
+      .cls-32 {
+        filter: url(#filter-32);
+      }
+
+      .cls-33 {
+        filter: url(#filter-33);
+      }
+
+      .cls-34 {
+        filter: url(#filter-34);
+      }
+
+      .cls-35 {
+        filter: url(#filter-35);
+      }
+
+      .cls-36 {
+        filter: url(#filter-36);
+      }
+
+      .cls-37 {
+        filter: url(#filter-37);
+      }
+
+      .cls-38 {
+        filter: url(#filter-38);
+      }
+
+      .cls-39 {
+        filter: url(#filter-39);
+      }
+
+      .cls-40 {
+        filter: url(#filter-40);
+      }
+
+      .cls-41 {
+        filter: url(#filter-41);
+      }
+
+      .cls-42 {
+        filter: url(#filter-42);
+      }
+
+      .cls-43 {
+        filter: url(#filter-43);
+      }
+
+      .cls-44 {
+        filter: url(#filter-44);
+      }
+
+      .cls-45 {
+        filter: url(#filter-45);
+      }
+
+      .cls-46 {
+        filter: url(#filter-46);
+      }
+
+      .cls-47 {
+        filter: url(#filter-47);
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="6" y="7" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="7" y="8" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="0" y="1" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-5" x="1" y="2" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-6" x="2" y="3" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-7" x="1" y="0" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-8" x="2" y="1" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-9" x="3" y="2" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-10" x="6" y="5" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-11" x="7" y="6" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-12" x="8" y="7" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-13" x="3" y="6" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-14" x="2" y="7" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-15" x="1" y="8" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-16" x="7" y="2" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-17" x="8" y="1" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-18" x="6" y="3" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-19" x="5" y="4" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-20" x="5" y="6" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-21" x="4" y="5" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-22" x="4" y="3" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-23" x="7" y="0" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-24" x="6" y="1" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-25" x="5" y="2" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-26" x="2" y="5" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-27" x="1" y="6" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-28" x="0" y="7" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-29" x="3" y="4" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-31" x="0" y="0" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-32" x="1" y="1" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-33" x="2" y="2" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-34" x="3" y="3" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-35" x="5" y="3" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-36" x="6" y="2" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-37" x="7" y="1" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-38" x="8" y="0" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-39" x="8" y="8" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-40" x="7" y="7" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-41" x="6" y="6" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-42" x="5" y="5" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-43" x="3" y="5" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-44" x="2" y="6" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-45" x="1" y="7" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-46" x="0" y="8" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-47" x="4" y="4" width="1" height="1" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#939393"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="輔助" class="cls-1">
+    <rect id="矩形_1_拷貝_27" data-name="矩形 1 拷貝 27" class="cls-2" x="6" y="7" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_28" data-name="矩形 1 拷貝 28" class="cls-3" x="7" y="8" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_30" data-name="矩形 1 拷貝 30" class="cls-4" y="1" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_31" data-name="矩形 1 拷貝 31" class="cls-5" x="1" y="2" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_32" data-name="矩形 1 拷貝 32" class="cls-6" x="2" y="3" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_33" data-name="矩形 1 拷貝 33" class="cls-7" x="1" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_34" data-name="矩形 1 拷貝 34" class="cls-8" x="2" y="1" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_35" data-name="矩形 1 拷貝 35" class="cls-9" x="3" y="2" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_36" data-name="矩形 1 拷貝 36" class="cls-10" x="6" y="5" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_37" data-name="矩形 1 拷貝 37" class="cls-11" x="7" y="6" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_38" data-name="矩形 1 拷貝 38" class="cls-12" x="8" y="7" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_39" data-name="矩形 1 拷貝 39" class="cls-13" x="3" y="6" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_40" data-name="矩形 1 拷貝 40" class="cls-14" x="2" y="7" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_41" data-name="矩形 1 拷貝 41" class="cls-15" x="1" y="8" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_42" data-name="矩形 1 拷貝 42" class="cls-16" x="7" y="2" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_45" data-name="矩形 1 拷貝 45" class="cls-17" x="8" y="1" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_43" data-name="矩形 1 拷貝 43" class="cls-18" x="6" y="3" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_44" data-name="矩形 1 拷貝 44" class="cls-19" x="5" y="4" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_26" data-name="矩形 1 拷貝 26" class="cls-20" x="5" y="6" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_25" data-name="矩形 1 拷貝 25" class="cls-21" x="4" y="5" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_24" data-name="矩形 1 拷貝 24" class="cls-22" x="4" y="3" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_21" data-name="矩形 1 拷貝 21" class="cls-23" x="7" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_22" data-name="矩形 1 拷貝 22" class="cls-24" x="6" y="1" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_23" data-name="矩形 1 拷貝 23" class="cls-25" x="5" y="2" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_18" data-name="矩形 1 拷貝 18" class="cls-26" x="2" y="5" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_19" data-name="矩形 1 拷貝 19" class="cls-27" x="1" y="6" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_20" data-name="矩形 1 拷貝 20" class="cls-28" y="7" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_17" data-name="矩形 1 拷貝 17" class="cls-29" x="3" y="4" width="1" height="1"/>
+  </g>
+  <g id="主要" class="cls-30">
+    <rect id="矩形_1" data-name="矩形 1" class="cls-31" width="1" height="1"/>
+    <rect id="矩形_1_拷貝" data-name="矩形 1 拷貝" class="cls-32" x="1" y="1" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_2" data-name="矩形 1 拷貝 2" class="cls-33" x="2" y="2" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_3" data-name="矩形 1 拷貝 3" class="cls-34" x="3" y="3" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_5" data-name="矩形 1 拷貝 5" class="cls-35" x="5" y="3" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_6" data-name="矩形 1 拷貝 6" class="cls-36" x="6" y="2" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_7" data-name="矩形 1 拷貝 7" class="cls-37" x="7" y="1" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_8" data-name="矩形 1 拷貝 8" class="cls-38" x="8" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_9" data-name="矩形 1 拷貝 9" class="cls-39" x="8" y="8" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_10" data-name="矩形 1 拷貝 10" class="cls-40" x="7" y="7" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_11" data-name="矩形 1 拷貝 11" class="cls-41" x="6" y="6" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_12" data-name="矩形 1 拷貝 12" class="cls-42" x="5" y="5" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_13" data-name="矩形 1 拷貝 13" class="cls-43" x="3" y="5" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_14" data-name="矩形 1 拷貝 14" class="cls-44" x="2" y="6" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_15" data-name="矩形 1 拷貝 15" class="cls-45" x="1" y="7" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_16" data-name="矩形 1 拷貝 16" class="cls-46" y="8" width="1" height="1"/>
+    <rect id="矩形_1_拷貝_4" data-name="矩形 1 拷貝 4" class="cls-47" x="4" y="4" width="1" height="1"/>
+  </g>
+</svg>
