@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '@react-qui/button'
 import styled from 'styled-components'
-import { noop } from 'lodash/core'
+import { noop, uniqueId } from 'lodash/core'
 
 import DialogContainer from '../DialogContainer/DialogContainer'
 
@@ -27,21 +27,36 @@ const TextDialog = ({
   children,
   confirmText,
   cancelText,
+  disableDraggableSelector,
   onConfirm = noop,
   onCancel = noop,
   ...rest
 }) => {
+  const buttonClass = uniqueId('button_group__')
+  const cancelSelector = disableDraggableSelector
+    ? [`.${buttonClass}`, disableDraggableSelector].join(', ')
+    : `.${buttonClass}`
   return (
-    <DialogContainer {...rest}>
+    <DialogContainer disableDraggableSelector={cancelSelector} {...rest}>
       <ContentBlock>{children}</ContentBlock>
       <ButtonGroup>
         {confirmText ? (
-          <Button theme="light" shape="square" onClick={onConfirm}>
+          <Button
+            className={buttonClass}
+            theme="light"
+            shape="square"
+            onClick={onConfirm}
+          >
             {confirmText}
           </Button>
         ) : null}
         {cancelText ? (
-          <CancelButton theme="light" shape="square" onClick={onCancel}>
+          <CancelButton
+            className={buttonClass}
+            theme="light"
+            shape="square"
+            onClick={onCancel}
+          >
             {cancelText}
           </CancelButton>
         ) : null}
@@ -52,6 +67,9 @@ const TextDialog = ({
 
 TextDialog.propTypes = {
   className: PropTypes.string,
+  draggableSelector: PropTypes.string,
+  disableDraggableSelector: PropTypes.string,
+  draggableOpts: PropTypes.object,
   visible: PropTypes.bool,
   onClose: PropTypes.func,
   confirmText: PropTypes.string,

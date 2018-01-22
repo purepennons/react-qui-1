@@ -43,7 +43,10 @@ const PopupDialog = ({ children, level, customIcon, ...rest }) => {
 
 PopupDialog.propTypes = {
   className: PropTypes.string,
+  draggableSelector: PropTypes.string,
+  disableDraggableSelector: PropTypes.string,
   visible: PropTypes.bool,
+  draggableOpts: PropTypes.object,
   level: PropTypes.oneOf(['info', 'warning', 'error', 'charging', 'ok', 'remind', 'delete', 'help', 'Error_but_system_still_can_process']),
   customIcon: PropTypes.string,
   onClose: PropTypes.func,

@@ -1,5 +1,5 @@
 ```js
-<PopupDialog visible level="info" confirmText="OK">
+<PopupDialog visible level="info" confirmText="OK" showClose>
   <h1>I am title!</h1>
   <p>
     VeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongTextVeryLongText

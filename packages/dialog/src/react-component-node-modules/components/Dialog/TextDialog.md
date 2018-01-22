@@ -3,6 +3,8 @@ Basic:
 ```js
 <TextDialog
   visible
+  showMini
+  showClose
   confirmText="Yes"
   cancelText="No"
   onClose={() => alert('close')}
