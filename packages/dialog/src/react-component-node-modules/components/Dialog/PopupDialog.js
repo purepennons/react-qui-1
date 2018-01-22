@@ -1,19 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import pathParse from 'path-parse'
 
 import TextDialog from './TextDialog'
+import { importAllFiles } from '../../utils/utils'
 
-const importAllFiles = (ctx, cb) => ctx.keys().reduce((acc, curr) => {
-  const p = pathParse(curr)
-  const ext = p.ext.slice(1)
-  if (!acc[ext]) acc[ext] = {}
-  acc[ext][p.name] = ctx(curr)
-  return acc
-}, {})
-
-const icons = importAllFiles(require.context('../../assets', true, /\.(png|jpe?g|svg)$/))
+const icons = importAllFiles(require.context('../../assets/level', true, /\.(png|jpe?g|svg)$/))
 
 const FlexContainer = styled.div`
   display: flex;
