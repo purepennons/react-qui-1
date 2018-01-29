@@ -34,9 +34,8 @@
     "idx": "^2.2.0",
     "lodash": "^4.17.4",
     "path-parse": "^1.0.5",
-    "react-draggable": "^3.0.5",
     "recompose": "^0.26.0",
-    "styled-components": "^2.4.0"
+    "styled-components": "^3.1.0"
   },
   "peerDependencies": {
     "normalize.css": "7.x",

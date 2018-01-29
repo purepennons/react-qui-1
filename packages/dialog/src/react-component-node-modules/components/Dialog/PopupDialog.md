@@ -10,18 +10,16 @@
 Error Level:
 
 ```js
-let style = { margin: '10px' }
 ;<div>
-  <PopupDialog style={style} visible level="info" confirmText="OK" />
-  <PopupDialog style={style} visible level="warning" confirmText="OK" />
-  <PopupDialog style={style} visible level="error" confirmText="OK" />
-  <PopupDialog style={style} visible level="charging" confirmText="OK" />
-  <PopupDialog style={style} visible level="ok" confirmText="OK" />
-  <PopupDialog style={style} visible level="remind" confirmText="OK" />
-  <PopupDialog style={style} visible level="delete" confirmText="OK" />
-  <PopupDialog style={style} visible level="help" confirmText="OK" />
+  <PopupDialog visible level="info" confirmText="OK">GGGGGGGGGGGGGG</PopupDialog>
+  <PopupDialog visible level="warning" confirmText="OK" />
+  <PopupDialog visible level="error" confirmText="OK" />
+  <PopupDialog visible level="charging" confirmText="OK" />
+  <PopupDialog visible level="ok" confirmText="OK" />
+  <PopupDialog visible level="remind" confirmText="OK" />
+  <PopupDialog visible level="delete" confirmText="OK" />
+  <PopupDialog visible level="help" confirmText="OK" />
   <PopupDialog
-    style={style}
     visible
     level="Error_but_system_still_can_process"
     confirmText="OK"

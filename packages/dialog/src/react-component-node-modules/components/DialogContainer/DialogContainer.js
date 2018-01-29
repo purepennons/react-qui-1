@@ -1,10 +1,11 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import idx from 'idx'
 import { noop, uniqueId } from 'lodash/core'
-import Draggable from 'react-draggable'
-import { withStateHandlers, compose } from 'recompose'
+import Rnd from 'react-rnd'
+import { withHandlers, withStateHandlers, lifecycle, compose } from 'recompose'
 
 import { $gray01, $bgColor } from '../../styled_global/colors'
 import { importAllFiles } from '../../utils/utils'
@@ -17,11 +18,11 @@ const Container = styled.div`
   display: ${props => (props.visible ? 'block' : 'none')};
   position: relative;
   box-sizing: border-box;
-  min-width: 340px;
-  max-width: 450px;
-  padding: 24px;
+  height: 100%;
   background: ${$bgColor};
   border: 1px solid ${$gray01};
+  overflow: hidden;
+  padding: 24px;
 
   * {
     box-sizing: border-box;
@@ -84,28 +85,60 @@ const ControlIcon = styled.a`
 const Content = styled.div`
   margin: 0;
   padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
 `
 
 const DialogContainer = ({
   children,
+  bounds,
+  position,
   theme,
   visible,
   draggableSelector,
   disableDraggableSelector,
-  draggableOpts,
+  rndOpts,
   showClose,
   showMini,
+  registerChild,
+  zIndex,
+  width,
+  height,
+  minWidth,
+  minHeight,
+  maxWidth,
+  maxHeight,
   onClose = noop,
   onMiniify = noop,
+  onResize = noop,
+  onReset = noop,
   ...rest
 }) => {
   const controlBarClass = uniqueId('control_bar__')
   const cancelSelector = disableDraggableSelector
     ? [`.${controlBarClass}`, disableDraggableSelector].join(', ')
     : `.${controlBarClass}`
-
+  
+  const rndStyle = {
+    position,
+  }
+  
   return (
-    <Draggable bounds="body" handle={draggableSelector} cancel={cancelSelector} {...draggableOpts}>
+    <Rnd
+      bounds={bounds}
+      style={rndStyle}
+      dragHandleClassName={draggableSelector}
+      cancel={cancelSelector}
+      ref={registerChild}
+      minWidth={minWidth}
+      minHeight={minHeight}
+      maxWidth={maxWidth}
+      maxHeight={maxHeight}
+      onResize={onResize}
+      z={zIndex}
+      {...rndOpts}
+    >
       <Container {...rest} visible={visible}>
         <ControlBar className={controlBarClass}>
           {showMini ? (
@@ -131,32 +164,63 @@ const DialogContainer = ({
         </ControlBar>
         <Content>{children}</Content>
       </Container>
-    </Draggable>
+    </Rnd>
   )
 }
 
 DialogContainer.propTypes = {
   className: PropTypes.string,
+  bounds: PropTypes.string,
+  containerPosition: PropTypes.string,
   draggableSelector: PropTypes.string,
   disableDraggableSelector: PropTypes.string,
-  draggableOpts: PropTypes.object,
+  rndOpts: PropTypes.object,
   theme: PropTypes.oneOf(['light', 'dark']),
   visible: PropTypes.bool,
   showClose: PropTypes.bool,
   showMini: PropTypes.bool,
+  zIndex: PropTypes.number,
+  minWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  minHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  maxHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   onClose: PropTypes.func,
   onMiniify: PropTypes.func,
+  onResize: PropTypes.func,
+  onReset: PropTypes.func,
 }
 
 DialogContainer.defaultProps = {
+  bounds: 'html',
+  position: 'absolute',
   theme: 'light',
+  zIndex: 99999,
   visible: false,
 }
 
 const enhancer = compose(
-  withStateHandlers(() => ({ activeDrags: 0 }), {
-    onStart: ({ activeDrags }) => () => ++activeDrags,
-    onStop: ({ activeDrags }) => () => --activeDrags,
+  withStateHandlers(() => ({ width: 0, height: 0 }), {
+    setWxH: () => (width, height) => ({ width, height }),
+  }),
+  withHandlers(() => {
+    let ref_
+    return {
+      registerChild: () => ref => (ref_ = ref),
+      setChildSize: ({ setWxH }) => () => {
+        if (!ref_) return
+        const node = ReactDOM.findDOMNode(ref_)
+        const { width, height } = node.getBoundingClientRect()
+        setWxH(width, height)
+      },
+    }
+  }),
+  lifecycle({
+    componentDidMount() {
+      window.addEventListener('load', () => this.props.setChildSize())
+    },
+    componentDidUpdate() {
+      this.props.setChildSize()
+    },
   }),
 )
 
