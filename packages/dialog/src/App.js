@@ -12,6 +12,8 @@ class App extends Component {
           visible
           confirmText="Yes"
           cancelText="No"
+          showClose
+          showMini
           onClose={() => alert('close')}
           onConfirm={() => alert('confirm')}
           onCancel={() => alert('cancel')}
