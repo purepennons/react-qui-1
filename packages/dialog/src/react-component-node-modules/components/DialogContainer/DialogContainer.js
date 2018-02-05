@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import idx from 'idx'
 import { noop, uniqueId } from 'lodash/core'
 import { Button } from '@react-qui/button'
 import Rnd from 'react-rnd'
@@ -10,6 +9,7 @@ import { withHandlers, withStateHandlers, lifecycle, compose } from 'recompose'
 
 import { $gray01, $bgColor } from '../../styled_global/colors'
 import { importAllFiles } from '../../utils/utils'
+import { ControlBar, ControlIcon } from './contorlBar'
 
 const icons = importAllFiles(
   require.context('../../assets/control_bar', true, /\.(png|jpe?g|svg)$/),
@@ -51,62 +51,6 @@ const Container = styled.div`
     box-sizing: border-box;
   }
 `
-
-const ControlBar = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-item: flex-start;
-  height: 24px;
-  padding: 10px;
-  margin-right: -8px;
-`
-
-const ControlIcon = styled.a`
-  width: 16px;
-  height: 16px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  i {
-    width: 9px;
-    height: 9px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: ${({ type, theme, iconsSrc }) =>
-      `url(${iconsSrc.svg[`btn_${type}_${theme}`] ||
-        iconsSrc.png[`btn_${type}_${theme}`] ||
-        ''})`};
-  }
-
-  &:hover {
-    i {
-      background-image: ${({ type, theme, iconsSrc }) => {
-        const url =
-          idx(iconsSrc, _ => _.svg[`btn_${type}_over_${theme}`]) ||
-          idx(iconsSrc, _ => _.png[`btn_${type}_over_${theme}`]) ||
-          ''
-        return `url("${url}")`
-      }};
-    }
-  }
-
-  &:active {
-    i {
-      background-image: ${({ type, theme, iconsSrc }) => {
-        const url =
-          idx(iconsSrc, _ => _.svg[`btn_${type}_pressed_${theme}`]) ||
-          idx(iconsSrc, _ => _.png[`btn_${type}_pressed_${theme}`]) ||
-          ''
-        return `url("${url}")`
-      }};
-    }
-  }
-`
-
 const Content = styled.div`
   position: relative;
   min-height: calc(100% - 74px);
