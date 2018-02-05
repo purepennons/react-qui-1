@@ -8,12 +8,7 @@ import Rnd from 'react-rnd'
 import { withHandlers, withStateHandlers, lifecycle, compose } from 'recompose'
 
 import { $gray01, $bgColor } from '../../styled_global/colors'
-import { importAllFiles } from '../../utils/utils'
 import { ControlBar, ControlIcon } from './contorlBar'
-
-const icons = importAllFiles(
-  require.context('../../assets/control_bar', true, /\.(png|jpe?g|svg)$/),
-)
 
 const controlBarClass = uniqueId('control_bar__')
 const buttonClass = uniqueId('button_group__')
@@ -29,7 +24,7 @@ const buttonClass = uniqueId('button_group__')
 //     { w: 0, h: 0 },
 //   )
 // }
-        
+
 // const updateOffset = (offset, originOffset) => {
 //   if (Math.sign(offset) !== Math.sign(originOffset))
 //     return offset + originOffset
@@ -129,22 +124,16 @@ const DialogContainer = ({
               className={controlBarClass}
               type="mini"
               theme={theme}
-              iconsSrc={icons}
               onClick={onMiniify}
-            >
-              <i />
-            </ControlIcon>
+            />
           ) : null}
           {showClose ? (
             <ControlIcon
               className={controlBarClass}
               type="close"
               theme={theme}
-              iconsSrc={icons}
               onClick={onClose}
-            >
-              <i />
-            </ControlIcon>
+            />
           ) : null}
         </ControlBar>
         <Content ref={registerRef('child')}>{children}</Content>
@@ -208,7 +197,7 @@ DialogContainer.defaultProps = {
   zIndex: 99999,
   visible: false,
   maxWidth: 'auto',
-  maxHeight: 'auto'
+  maxHeight: 'auto',
 }
 
 const enhancer = compose(

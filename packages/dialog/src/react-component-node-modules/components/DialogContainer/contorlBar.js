@@ -1,5 +1,11 @@
+import React from 'react'
 import styled from 'styled-components'
 import idx from 'idx'
+import { importAllFiles } from '../../utils/utils'
+
+const icons = importAllFiles(
+  require.context('../../assets/control_bar', true, /\.(png|jpe?g|svg)$/),
+)
 
 const getImageURL = (type, theme, iconsSrc, status) => {
   return (
@@ -18,7 +24,8 @@ export const ControlBar = styled.div`
   padding: 10px;
 `
 
-export const ControlIcon = styled.a`
+const Icon = props => <a {...props}><i/></a>
+export const ControlIcon = styled(Icon)`
   width: 16px;
   height: 16px;
   display: flex;
@@ -32,21 +39,21 @@ export const ControlIcon = styled.a`
     height: 9px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: ${({ type, theme, iconsSrc }) =>
-      `url("${getImageURL(type, theme, iconsSrc, 'normal')}")`};
+    background-image: ${({ type, theme }) =>
+      `url("${getImageURL(type, theme, icons, 'normal')}")`};
   }
 
   &:hover {
     i {
-      background-image: ${({ type, theme, iconsSrc }) =>
-        `url("${getImageURL(type, theme, iconsSrc, 'over')}")`};
+      background-image: ${({ type, theme }) =>
+        `url("${getImageURL(type, theme, icons, 'over')}")`};
     }
   }
 
   &:active {
     i {
-      background-image: ${({ type, theme, iconsSrc }) =>
-        `url("${getImageURL(type, theme, iconsSrc, 'pressed')}")`};
+      background-image: ${({ type, theme }) =>
+        `url("${getImageURL(type, theme, icons, 'pressed')}")`};
     }
   }
 `
