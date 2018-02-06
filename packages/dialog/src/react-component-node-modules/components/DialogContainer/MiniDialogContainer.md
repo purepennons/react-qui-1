@@ -1,0 +1,3 @@
+```js
+<MiniDialogContainer title="LongLongTitleLongLongTitleLongLongTitleLongLongTitle" />
+```
